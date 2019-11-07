@@ -8,7 +8,7 @@
 
 ## running tests
 
-to run tests use `vendor/bin/phpunit` if on os x/linux or `vendor/bin/phpunit.bat` if on windows os
+to run tests use `vendor/bin/phpunit` if on os x/linux or `vendor\bin\phpunit.bat` if on windows os
 
 ## running app
 
