@@ -12,6 +12,7 @@ class ReportFileWriter implements ReportFileWriterInterface
 {
     private const REPORT_HEADERS = ['Kurier', 'Nr listu', 'Kwota', 'Klient', 'Nr Zam'];
     private const REPORT_SUM_LABEL = 'Suma:';
+    public const REPORT_STORAGE_PATH = 'storage/reports/';
 
     public function createReportFile(ReportData $reportData)
     {
@@ -84,6 +85,6 @@ class ReportFileWriter implements ReportFileWriterInterface
      */
     private function getFileName(ReportData $reportData): string
     {
-        return $reportData->getClientName() . '_report_' . $reportData->getDate()->format('Ymd') . '.xlsx';
+        return self::REPORT_STORAGE_PATH . $reportData->getClientName() . '_report_' . $reportData->getDate()->format('Ymd') . '.xlsx';
     }
 }
